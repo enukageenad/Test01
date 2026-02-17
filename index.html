@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnuX | Official Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Inter:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="home-page">
+
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="EnuX Logo" class="logo-img">
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Home</a>
+            <a href="music.html">Music</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-video-container">
+            <video id="hero-bg-video" autoplay muted loop playsinline></video>
+        </div>
+        <div class="hero-content animate-fade-in">
+            <h1>Enuka Geenad <span style="font-size: 1rem; color: var(--accent); vertical-align: super;">(EnuX)</span>
+            </h1>
+            <h2 id="bio-short" class="animate-delay-1">Loading Bio...</h2>
+
+            <div class="social-links animate-delay-2" id="social-links-home">
+                <!-- Populated by JS -->
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+
+            <a href="about.html" class="btn animate-delay-3">Learn More</a>
+        </div>
+    </header>
+
+    <section id="latest-music">
+        <h2 class="section-title">Latest Releases</h2>
+        <div class="music-grid" id="home-music-grid">
+            <!-- Populated by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="music.html" class="btn btn-secondary">See All Songs</a>
+        </div>
+    </section>
+
+    <section id="latest-videos-enux">
+        <h2 class="section-title">Latest from EnuXStreams</h2>
+        <div class="video-grid" id="enux-video-grid">
+            <!-- Populated by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://www.youtube.com/@EnuXStreams" target="_blank" class="btn btn-secondary">Visit Channel</a>
+        </div>
+    </section>
+
+    <section id="latest-videos-diary">
+        <h2 class="section-title">Latest from Enuka's Diary</h2>
+        <div class="video-grid" id="diary-video-grid">
+            <!-- Populated by JS -->
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="https://www.youtube.com/@EnukasDiary" target="_blank" class="btn btn-secondary">Visit Channel</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Enuka Geenad. All Rights Reserved.</p>
+        <p><a href="admin.html" style="opacity: 0.3; font-size: 0.8rem;">Admin Login</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Inline populator for socials to ensure they load fast or rely on script.js
+        // script.js handles it globally
+    </script>
+</body>
+
+</html>

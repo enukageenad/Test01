@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | EnuX</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body id="admin-page">
+    <div id="admin-login" class="admin-login-overlay">
+        <div class="glass-card" style="width: 300px; text-align: center;">
+            <h2 style="margin-bottom: 2rem;">Admin Access</h2>
+            <input type="password" id="admin-pass" placeholder="Password"
+                style="width: 100%; padding: 10px; margin-bottom: 1rem; border-radius: 5px; border: none;">
+            <button id="login-btn" class="btn">Login</button>
+        </div>
+    </div>
+
+    <div id="admin-dashboard" class="hidden" style="padding: 2rem;">
+        <nav style="position: relative; background: transparent; backdrop-filter: none;">
+            <div class="logo">
+                <img src="logo.png" alt="EnuX Logo" class="logo-img">
+            </div>
+            <a href="index.html" class="btn btn-secondary">Back to Site</a>
+        </nav>
+
+        <section>
+            <h2 class="section-title">Manage Content</h2>
+
+            <div class="admin-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+
+                <!-- Add Song -->
+                <div class="glass-card admin-form">
+                    <h3>Upload New Song</h3>
+                    <form id="add-song-form">
+                        <input type="text" id="song-title" placeholder="Song Title" required>
+                        <input type="url" id="song-cover" placeholder="Cover Image URL">
+                        <input type="url" id="song-spotify" placeholder="Spotify Link">
+                        <input type="url" id="song-apple" placeholder="Apple Music Link">
+                        <input type="url" id="song-youtube" placeholder="YouTube Link">
+                        <button type="submit" class="btn">Add Song</button>
+                    </form>
+                </div>
+
+                <!-- Update Profile Details -->
+                <div class="glass-card admin-form">
+                    <h3>Update Profile Details</h3>
+                    <form id="update-details-form">
+                        <label style="color: #b2bec3; font-size: 0.9rem;">Full Name</label>
+                        <input type="text" id="detail-fullname" placeholder="Full Name">
+
+                        <label style="color: #b2bec3; font-size: 0.9rem;">Email Address</label>
+                        <input type="email" id="detail-email" placeholder="contact@example.com">
+
+                        <label style="color: #b2bec3; font-size: 0.9rem;">Mobile Number</label>
+                        <input type="tel" id="detail-phone" placeholder="+00 123 456 789">
+
+                        <label style="color: #b2bec3; font-size: 0.9rem;">Hero Background Video URL</label>
+                        <input type="url" id="detail-hero-video" placeholder="https://example.com/video.mp4">
+
+                        <label style="color: #b2bec3; font-size: 0.9rem;">Short Bio (Home Page)</label>
+                        <textarea id="detail-bio" rows="3" placeholder="Short Bio for Home Page"></textarea>
+
+                        <label style="color: #b2bec3; font-size: 0.9rem;">Full About Me (About Page)</label>
+                        <textarea id="detail-about-full" rows="6" placeholder="Detailed About Me"></textarea>
+
+                        <label style="color: #b2bec3; font-size: 0.9rem;">Qualifications (One per line)</label>
+                        <textarea id="detail-qualifications" rows="4"
+                            placeholder="BSc in Computer Science&#10;Certified Music Producer"></textarea>
+
+                        <label style="color: #b2bec3; font-size: 0.9rem;">Skills (Comma separated)</label>
+                        <input type="text" id="detail-skills" placeholder="Web Development, Music Production, Python">
+
+                        <button type="submit" class="btn">Save Details</button>
+                    </form>
+                </div>
+
+                <!-- Manage Music (Remove Songs) -->
+                <div class="glass-card admin-form">
+                    <h3>Manage Music Library</h3>
+                    <div id="admin-song-list" style="max-height: 300px; overflow-y: auto; margin-top: 1rem;">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+
+                <!-- Add Social Link -->
+                <div class="glass-card admin-form">
+                    <h3>Add Social Link</h3>
+                    <form id="add-social-form">
+                        <select id="social-platform"
+                            style="width: 100%; padding: 10px; margin-bottom: 1rem; background: rgba(255,255,255,0.1); color: white; border: none; border-radius: 5px;">
+                            <option value="Facebook">Facebook</option>
+                            <option value="YouTube">YouTube</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="TikTok">TikTok</option>
+                            <option value="X">X (Twitter)</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Linux">Linux</option>
+                            <option value="Globe">Other Website</option>
+                        </select>
+                        <input type="url" id="social-url" placeholder="Profile URL" required>
+                        <button type="submit" class="btn">Add Link</button>
+                    </form>
+                </div>
+
+                <!-- Upload CV -->
+                <div class="glass-card admin-form">
+                    <h3>Upload CV</h3>
+                    <form id="upload-cv-form">
+                        <input type="file" id="cv-file" accept=".pdf,.doc,.docx">
+                        <small style="color: #b2bec3; display: block; margin-bottom: 1rem;">(Simulated upload - will log
+                            to console)</small>
+                        <button type="submit" class="btn">Upload CV</button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Additional Admin Logic specific to this page
+        // (Though script.js has initAdmin, we can add specific listeners here if expanding later)
+    </script>
+</body>
+
+</html>
